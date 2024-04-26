@@ -1,18 +1,352 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <header class="bg-cyan-800">
-        <div class="text-center">
-            <h1 class="text-white text-2xl">AVAVAADE</h1>
+
+<body class="">
+    <header class="flex justify-end p-3 pr-12 bg-gray-700">
+        <section>
+            <div class="relative flex justify-center" x-data="{ open: false }">
+                <button @click="open = !open" type="button" class="" id="options-menu" aria-expanded="true"
+                    aria-haspopup="true" :aria-expanded="open ? 'true' : 'false'">
+                    <img src="/img/burger1.png" alt="">
+                    <path fill-rule="evenodd" clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+
+                <div x-show="open" @click.away="open = false"
+                    class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="none">
+                        <a href="index3.html"
+                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Lisa Tehnika</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Tehnika Info</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                window.addEventListener('DOMContentLoaded', function () {
+                    Alpine.start();
+                });
+            </script>
+
+        </section>
+    </header>
+    <section>
+        <div class="flex justify-center p-5">
+            <a href="index2.html"><img src="/img/test.png" alt=""></a>
+        </div>
+        <section>
+            <form class="max-w-md mx-16">
+                <label for="default-search"
+                    class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-700 dark:text-gray-700" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search"
+                        class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-700 rounded-lg bg-gray- focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Otsi Toodet" required />
+                    <button type="submit"
+                        class="text-white absolute end-2.5 bottom-2.5 bg-gray-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-gray-600 ">Otsi</button>
+                </div>
+            </form>
+        </section>
+        <section class="">
+            <div>
+                <div class="relative flex justify-center">
+                    <div class="block md:hidden" x-data="{ open: false }">
+                        <button @click="open = !open" type="button"
+                            class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm  text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                            id="options-menu" aria-expanded="true" aria-haspopup="true"
+                            :aria-expanded="open ? 'true' : 'false'">
+                            KAAMERAD
+                            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div x-show="open" @click.away="open = false"
+                            class=" mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                            role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <div class="py-1" role="none">
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 6D mark II</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS R6 mark II</a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS R6 </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS R6 </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                                    role="menuitem">Canon EOS 700D </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                Alpine.start();
+            });
+        </script>
+    </section>
+    <section class="mx-12">
+        <div class="relative flex justify-center ">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center  px-24 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    OPTIKAD
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class=" mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma DG 70-200mm f/2,8 OS HSM Canonile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma EF 50mm f/1,4 Canonile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma EF 35mm f/1,8 Canonile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma EF 35mm f/1,8 Canonile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma EX 105mm f/2,8 DG OS Macro Canonile</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Sigma EF 24-70mm f/2,8 DG Canonile</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                Alpine.start();
+            });
+        </script>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    VÄLGUD
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class=" mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                Alpine.start();
+            });
+        </script>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    STATIIVID
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                Alpine.start();
+            });
+        </script>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    VALGUSTID
+                    <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                        fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="origin-center absolute  mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="none">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
+        <script>
+            window.addEventListener('DOMContentLoaded', function () {
+                Alpine.start();
+            });
+        </script>
+    </section>
 
-    </header>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    AUDIOTEHNIKA
+                    <svg class="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="none">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Diktofon Zoom H6</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    KOTID
+                    <svg class="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    DIGILAUAD
+                    <svg class="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="">
+        <div class="relative flex justify-center">
+            <div class="block md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" type="button"
+                    class="inline-flex items-center px-20 py-2 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
+                    id="options-menu" aria-expanded="true" aria-haspopup="true"
+                    :aria-expanded="open ? 'true' : 'false'">
+                    ARVUTID
+                    <svg class="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M10 3.586l-6.293 6.293a1 1 0 001.414 1.414L10 6.414l5.293 5.293a1 1 0 001.414-1.414L11.414 3.586a1 1 0 00-1.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" role="menu"
+                    aria-orientation="vertical" aria-labelledby="options-menu">
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <header class="flex justify-between p-2 pr-12 bg-gray-700">
+        <a href="index.html"><img src="/img/arrow.png" class="p-2" alt=""></a>
+        <section>
+            <div class="relative flex justify-center" x-data="{ open: false }">
+                <button @click="open = !open" type="button" class="" id="options-menu" aria-expanded="true"
+                    aria-haspopup="true" :aria-expanded="open ? 'true' : 'false'">
+                    <img src="/img/burger1.png" alt="">
+                    <path fill-rule="evenodd" clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+
+                <div x-show="open" @click.away="open = false"
+                    class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
+                    role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="none">
+                        >
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                            role="menuitem">Tehnika Info</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+
+                window.addEventListener('DOMContentLoaded', function () {
+                    Alpine.start();
+                });
+            </script>
+
+        </section>
+    </header>
+    <section class="p-24 ">
+        <div class="flex justify-center">
+
+            <form>
+                <div class="">
+                    <div class="">
+                        <label for="first_name"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white"></label>
+                        <input type="text" id="first_name"
+                            class="bg-gray-50  border text-center text-white border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Sisesta Nimetus ..." required />
+                    </div>
+                    <div class="">
+                        <label for="first_name"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white"></label>
+                        <input type="text" id="first_name"
+                            class="bg-gray-50  border text-center text-white border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Sisesta seerianumber" required />
+                    </div>
+                    <div class="">
+                        <label for="first_name"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white"></label>
+                        <input type="text" id="first_name"
+                            class="bg-gray-50  border text-center text-white border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Sisesta kooli kood" required />
+                    </div>
+                    <div class="">
+                        <label for="first_name"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white"></label>
+                        <input type="text" id="first_name"
+                            class="bg-gray-50  border text-center text-white border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Sisesta kategooria" required />
+                    </div>
+                    <div class="">
+                        <label for="first_name"
+                            class="block mb-2 text-sm font-medium text-white dark:text-white"></label>
+                        <input type="text" id="first_name"
+                            class="bg-gray-50  border text-center text-white border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Sisesta märkus" required />
+                    </div>
+    </section>
+    <footer class="flex justify-between p-10">
+        <button class="bg-gray-700 text-white rounded-xl px-5 mx-5"><a href=""></a>MUUDA</button>
+    </footer>
+</body>
+
+</html>
